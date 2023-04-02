@@ -1,0 +1,36 @@
+Luhad Technologies Internal Network IP Space Layout
+
+DH = Data Hall
+RK = Rack
+R = Router
+S = Spine Spine
+L = Leaf Router
+NETRK = Network Rack
+
+DH1NETRK = Data Hall 1 Network Rack
+DH1RK1L = Data Hall 1 Rack 1 Leaf Router
+DH2RK6L = Data Hall 2 Rack 6 Leaf Router
+DH6S8 = Data Hall 6 Spine Router 8
+
+10.0.0.0/16 -> Network Services
+    10.0.0.0/24 Core Services
+        10.0.0.1 - Core 1
+        10.0.0.2 - Core 2
+    10.0.1.0/24 -> Data Hall 1 Leaf-Spine Connections
+        10.0.1.1/31 DH1S1>DH1RK1L
+        10.0.1.3/31 DH1S1>DH1RK2L
+        10.0.1.5/31 DH1S1>DH1RK3L
+        ...
+    10.0.1
+10.1.0.0/16 -> Data Hall 1
+    10.1.0.0/24 -> Reserved
+    10.1.1.0/24 -> DH1RK1
+        10.1.1.1/32 - DH1RK1L
+    10.1.2.0/24 ->DH1RK2
+    10.1.3.0/24 -> DH1RK3
+    ...
+
+10.2.0.0/16 -> Luhad Technologies Container Networks
+
+10.3.0.0/16 -> Customer Container Networks
+    10.3.1.0/24 -> Swagbucks
