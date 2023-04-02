@@ -6,11 +6,13 @@ R = Router
 S = Spine Spine
 L = Leaf Router
 NETRK = Network Rack
+HV = Hypervisor
 
 DH1NETRK = Data Hall 1 Network Rack
 DH1RK1L = Data Hall 1 Rack 1 Leaf Router
 DH2RK6L = Data Hall 2 Rack 6 Leaf Router
 DH6S8 = Data Hall 6 Spine Router 8
+DH1RK1HV1 = Datahall 1 Rack 1 Hypervisor 1
 
 10.0.0.0/16 -> Network Services
     10.0.0.0/24 Core Services
@@ -26,11 +28,32 @@ DH6S8 = Data Hall 6 Spine Router 8
     10.1.0.0/24 -> Reserved
     10.1.1.0/24 -> DH1RK1
         10.1.1.1/32 - DH1RK1L
+        10.1.1.2/32 - DH1RK1HV1
+        10.1.1.3/32 - luhad.tech Frontend
+        10.1.1.4/32 - luhad.tech Backend
+        10.1.1.5/32 - luhad.tech Cards
     10.1.2.0/24 ->DH1RK2
     10.1.3.0/24 -> DH1RK3
     ...
 
-10.2.0.0/16 -> Luhad Technologies Container Networks
+10.2.0.0/16 -> Data Hall 2
 
-10.3.0.0/16 -> Customer Container Networks
-    10.3.1.0/24 -> Swagbucks
+10.3.0.0/16 -> Data Hall 3
+...
+10.200.0.0/16 -> Data Hall 200
+
+10.201.0.0/16 -> Luhad Corporate Network
+    10.201.0.0/23 - Luhad Corporate Network Services
+    10.201.2.0/24 - VPN VLAN
+    10.201.3.0/24 - Reserved
+    10.201.4.0/23 - Reserved
+    10.201.6.0/22 - Luhad Main Office
+
+10.202.0.0/16 -> Reserved
+
+10.203.0.0/16 -> Reserved
+...
+10.255.0.0/16 -> Reserved
+
+172.16.0.0/12 -> Reserved Network Services
+192.168.0.0/16 -> Reserved Network Services
