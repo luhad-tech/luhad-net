@@ -3,7 +3,7 @@ Luhad Technologies Internal Network IP Space Layout
 DH = Data Hall
 RK = Rack
 R = Router
-S = Spine Spine
+S = Spine Router
 L = Leaf Router
 NETRK = Network Rack
 HV = Hypervisor
